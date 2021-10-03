@@ -13,5 +13,13 @@ namespace RUNT
         {
 
         }
+
+        protected void Enviar(object sender, EventArgs e)
+        {
+            if (IsValid)
+            {
+                Console.log("Passed Succesfully!");
+            }
+        }
     }
 }
