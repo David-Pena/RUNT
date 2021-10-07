@@ -139,12 +139,13 @@ namespace RUNT
                     ciudad.Text = rd.GetValue(6).ToString();
                     tel.Text = rd.GetValue(7).ToString();
                     firma.Text = rd.GetValue(8).ToString();
-                    tipoUsuario.Text = rd.GetValue(9).ToString();
+                    DropDownList4.SelectedValue = rd.GetValue(9).ToString();
                 }
             }
             conn.Close();
         }
 
+        // Metodo para actualizar la informacion general del tramite
         protected void ActualizarInfGrl(object sender, EventArgs e)
         {
             conn.Open();
@@ -155,6 +156,7 @@ namespace RUNT
             ObtenerRegistros();
         }
 
+        // Metodo para actualizar la informacion general del vehiculo
         protected void ActualizarInfGrlVehiculo(object sender, EventArgs e)
         {
             conn.Open();
@@ -165,6 +167,7 @@ namespace RUNT
             ObtenerRegistros();
         }
 
+        // Metodo para actualizar la informacion detallada del vehiculo
         protected void ActualizarInfEspVehiculo(object sender, EventArgs e)
         {
             conn.Open();
@@ -175,6 +178,7 @@ namespace RUNT
             ObtenerRegistros();
         }
 
+        // Metodo para actualizar la informacion de las personas involucradas
         protected void ActualizarInfPersona(object sender, EventArgs e)
         {
             conn.Open();
@@ -182,6 +186,46 @@ namespace RUNT
             comm.ExecuteNonQuery();
             conn.Close();
             ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Registro actualizado exitosamente');", true);
+            ObtenerRegistros();
+        }
+
+        protected void EliminarGeneral(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlCommand comm = new SqlCommand("Delete InformacionGeneral where ID= '" + int.Parse(TextBox5.Text) + "'", conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Registro eliminado exitosamente');", true);
+            ObtenerRegistros();
+        }
+
+        protected void EliminarVehiculo(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlCommand comm = new SqlCommand("Delete InformacionGeneralVehiculo where NoIdentificacion= '" + int.Parse(TextBox6.Text) + "'", conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Registro eliminado exitosamente');", true);
+            ObtenerRegistros();
+        }
+
+        protected void EliminarDetalle(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlCommand comm = new SqlCommand("Delete InformacionEspecificaVehiculo where IDDetalle= '" + int.Parse(TextBox7.Text) + "'", conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Registro eliminado exitosamente');", true);
+            ObtenerRegistros();
+        }
+
+        protected void EliminarPersona(object sender, EventArgs e)
+        {
+            conn.Open();
+            SqlCommand comm = new SqlCommand("Delete InformacionPersona where NoDocumento= '" + TextBox8.Text + "'", conn);
+            comm.ExecuteNonQuery();
+            conn.Close();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "script", "alert('Registro eliminado exitosamente');", true);
             ObtenerRegistros();
         }
     }

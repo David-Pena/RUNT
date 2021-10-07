@@ -163,6 +163,86 @@
         </div>
         <!-- Fin OffCanvas #4 -->
 
+        <!-- Inicio Modal #1 -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Eliminar Registro</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <asp:TextBox ID="TextBox5" runat="server" placeholder="ID" CssClass="form-control w-100"></asp:TextBox>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <asp:Button type="button" runat="server" class="btn btn-danger" Text="Eliminar" OnClick="EliminarGeneral"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal #1 -->
+
+        <!-- Inicio Modal #2 -->
+        <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel2">Eliminar Registro</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <asp:TextBox ID="TextBox6" runat="server" placeholder="No Identificacion" CssClass="form-control w-100"></asp:TextBox>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <asp:Button type="button" runat="server" class="btn btn-danger" Text="Eliminar" OnClick="EliminarVehiculo"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal #2 -->
+
+        <!-- Inicio Modal #3 -->
+        <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel3">Eliminar Registro</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <asp:TextBox ID="TextBox7" runat="server" placeholder="ID Detalle" CssClass="form-control w-100"></asp:TextBox>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <asp:Button type="button" runat="server" class="btn btn-danger" Text="Eliminar" OnClick="EliminarDetalle"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal #3 -->
+
+        <!-- Inicio Modal #4 -->
+        <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel4">Eliminar Registro</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <asp:TextBox ID="TextBox8" runat="server" placeholder="No Documento" CssClass="form-control w-100"></asp:TextBox>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <asp:Button type="button" runat="server" class="btn btn-danger" Text="Eliminar" OnClick="EliminarPersona"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Fin Modal #4 -->
+
         <div class="container p-5 shadow-lg main">
             <div class="accordion accordion-flush" id="accordionExample">
               <div class="accordion-item">
@@ -174,76 +254,80 @@
                 <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                   <div class="accordion-body">
                       <div class="row">
-                          <div class="col-12 col-lg-12">
-                              <div class="d-flex">
-                                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Actualizar</button>
-                                  <asp:Button ID="Button2" runat="server" Text="Eliminar" CssClass="btn btn-danger"/>
+                          <div class="col-12 col-lg-12 table-responsive">
+                              <div class="d-flex mb-2">
+                                  <button class="btn btn-primary me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">Actualizar</button>
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">Eliminar</button>
                               </div>
                               <asp:GridView ID="GridView1" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="80px" Width="412px" CssClass="table table-hover text-center">
-                                  <AlternatingRowStyle BackColor="White" />
-                                  <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                                  <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                                  <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
-                                  <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
-                                  <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-                                  <SortedAscendingCellStyle BackColor="#FDF5AC" />
-                                  <SortedAscendingHeaderStyle BackColor="#4D0000" />
-                                  <SortedDescendingCellStyle BackColor="#FCF6C0" />
-                                  <SortedDescendingHeaderStyle BackColor="#820000" />
+                                  <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                  <EditRowStyle BackColor="#999999" />
+                                  <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                  <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                  <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                  <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                  <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                  <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                  <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                  <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                  <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                               </asp:GridView>
                           </div>
-                          <div class="col-12 col-lg-12">
-                              <div class="d-flex">
-                                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight">Actualizar</button>                       
-                                  <asp:Button ID="Button4" runat="server" Text="Eliminar" CssClass="btn btn-danger"/>
+                          <div class="col-12 col-lg-12 table-responsive">
+                              <div class="d-flex mb-2">
+                                  <button class="btn btn-primary me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight2" aria-controls="offcanvasRight">Actualizar</button>    
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal2">Eliminar</button>
                               </div>
                               <asp:GridView ID="GridView2" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="105px" Width="411px" CssClass="table table-hover text-center">
-                                  <AlternatingRowStyle BackColor="White" />
-                                  <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                                  <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                                  <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
-                                  <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
-                                  <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-                                  <SortedAscendingCellStyle BackColor="#FDF5AC" />
-                                  <SortedAscendingHeaderStyle BackColor="#4D0000" />
-                                  <SortedDescendingCellStyle BackColor="#FCF6C0" />
-                                  <SortedDescendingHeaderStyle BackColor="#820000" />
+                                  <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                  <EditRowStyle BackColor="#999999" />
+                                  <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                  <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                  <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                  <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                  <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                  <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                  <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                  <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                  <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                               </asp:GridView>
                           </div>
-                          <div class="col-12 col-lg-12">
-                              <div class="d-flex">
-                                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight3" aria-controls="offcanvasRight">Actualizar</button>   
-                                  <asp:Button ID="Button6" runat="server" Text="Eliminar" CssClass="btn btn-danger"/>
+                          <div class="col-12 col-lg-12 table-responsive">
+                              <div class="d-flex mb-2">
+                                  <button class="btn btn-primary me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight3" aria-controls="offcanvasRight">Actualizar</button>   
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal3">Eliminar</button>
                               </div>
                               <asp:GridView ID="GridView3" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="119px" Width="411px" CssClass="table table-hover text-center">
-                                  <AlternatingRowStyle BackColor="White" />
-                                  <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                                  <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                                  <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
-                                  <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
-                                  <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-                                  <SortedAscendingCellStyle BackColor="#FDF5AC" />
-                                  <SortedAscendingHeaderStyle BackColor="#4D0000" />
-                                  <SortedDescendingCellStyle BackColor="#FCF6C0" />
-                                  <SortedDescendingHeaderStyle BackColor="#820000" />
+                                  <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                  <EditRowStyle BackColor="#999999" />
+                                  <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                  <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                  <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                  <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                  <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                  <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                  <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                  <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                  <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                               </asp:GridView>
                           </div>
-                          <div class="col-12 col-lg-12">
-                              <div class="d-flex">
-                                  <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight4" aria-controls="offcanvasRight">Actualizar</button>    
-                                  <asp:Button ID="Button8" runat="server" Text="Eliminar" CssClass="btn btn-danger"/>
+                          <div class="col-12 col-lg-12 table-responsive">
+                              <div class="d-flex mb-2">
+                                  <button class="btn btn-primary me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight4" aria-controls="offcanvasRight">Actualizar</button>    
+                                  <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal4">Eliminar</button>
                               </div>
                               <asp:GridView ID="GridView4" runat="server" CellPadding="4" ForeColor="#333333" GridLines="None" Height="118px" Width="411px" CssClass="table table-hover text-center">
-                                  <AlternatingRowStyle BackColor="White" />
-                                  <FooterStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                                  <HeaderStyle BackColor="#990000" Font-Bold="True" ForeColor="White" />
-                                  <PagerStyle BackColor="#FFCC66" ForeColor="#333333" HorizontalAlign="Center" />
-                                  <RowStyle BackColor="#FFFBD6" ForeColor="#333333" />
-                                  <SelectedRowStyle BackColor="#FFCC66" Font-Bold="True" ForeColor="Navy" />
-                                  <SortedAscendingCellStyle BackColor="#FDF5AC" />
-                                  <SortedAscendingHeaderStyle BackColor="#4D0000" />
-                                  <SortedDescendingCellStyle BackColor="#FCF6C0" />
-                                  <SortedDescendingHeaderStyle BackColor="#820000" />
+                                  <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
+                                  <EditRowStyle BackColor="#999999" />
+                                  <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                  <HeaderStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
+                                  <PagerStyle BackColor="#284775" ForeColor="White" HorizontalAlign="Center" />
+                                  <RowStyle BackColor="#F7F6F3" ForeColor="#333333" />
+                                  <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
+                                  <SortedAscendingCellStyle BackColor="#E9E7E2" />
+                                  <SortedAscendingHeaderStyle BackColor="#506C8C" />
+                                  <SortedDescendingCellStyle BackColor="#FFFDF8" />
+                                  <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
                               </asp:GridView>
                           </div>
                       </div>
