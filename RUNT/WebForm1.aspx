@@ -13,11 +13,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>RUNT</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
 </head>
 <body>
     <form id="form1" runat="server" class="main_father">
+        <ul class="nav nav-tabs nav-fill">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="WebForm1.aspx">Formulario RUNT</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">David Peña Avila</a>
+            </li>
+        </ul>
         <div class="container p-5 shadow-lg main">
             <div class="row">
                 <div class="col-12 col-lg-4 col-md-12 p-sm-3 text-lg-start text-sm-center">
@@ -29,13 +37,11 @@
                 <div class="col-12 col-lg-4 col-md-12 p-sm-3">
                     <div>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="nombre" ErrorMessage="Campo Requerido" ForeColor="Red">*</asp:RequiredFieldValidator><br />
-                        <asp:TextBox type="text" runat="server" class="form-control" placeholder="Nombre" aria-label="Nombre" ID="nombre"/>
+                        <asp:TextBox type="text" runat="server" class="form-control" Text="Servicios Integrales para la Movilidad - SIM" disabled="true" aria-label="Nombre" ID="nombre"/>
                         <div class="d-flex">
-                            <asp:TextBox type="text" runat="server" class="form-control" placeholder="Ciudad" aria-label="Ciudad" ID="ciudad"/>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="ciudad" ErrorMessage="Campo Requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
-                            <asp:TextBox type="text" runat="server" class="form-control" placeholder="Codigo" aria-label="Codigo" ID="codigo"/>
-                            <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ControlToValidate="codigo" ErrorMessage="Campo Requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
-                            <asp:TextBox type="text" runat="server" class="form-control" placeholder="Fecha" aria-label="Fecha" ID="fecha"/>
+                            <asp:TextBox type="text" runat="server" class="form-control" Text="Bogotá" disabled="true" aria-label="Ciudad" ID="ciudad"/>
+                            <asp:TextBox type="text" runat="server" class="form-control" Text="11001" disabled="true" aria-label="Codigo" ID="codigo"/>
+                            <asp:TextBox type="text" runat="server" class="form-control" placeholder="mm/dd/yyyy" aria-label="Fecha" ID="fecha"/>
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ControlToValidate="fecha" ErrorMessage="Campo Requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
                         </div>
                     </div>
