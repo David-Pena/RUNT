@@ -235,11 +235,11 @@
                         <div class="col-12 col-lg-5">
                             <asp:RequiredFieldValidator ID="RequiredFieldValidator38" runat="server" ControlToValidate="DropDownList6" ErrorMessage="Campo Requerido" ForeColor="Red">*</asp:RequiredFieldValidator>
                             <asp:DropDownList ID="DropDownList6" runat="server" CssClass="form-control">
-                            <asp:ListItem Value="Default">Cabina</asp:ListItem>
-                            <asp:ListItem Value="Cerrada">Cerrada</asp:ListItem>
-                            <asp:ListItem Value="Parasol">Parasol</asp:ListItem>
-                            <asp:ListItem Value="Sin Cabina">Sin Cabina</asp:ListItem>
-                            <asp:ListItem Value="Otro">Otro</asp:ListItem>
+                                <asp:ListItem Value="Default">Cabina</asp:ListItem>
+                                <asp:ListItem Value="Cerrada">Cerrada</asp:ListItem>
+                                <asp:ListItem Value="Parasol">Parasol</asp:ListItem>
+                                <asp:ListItem Value="Sin Cabina">Sin Cabina</asp:ListItem>
+                                <asp:ListItem Value="Otro">Otro</asp:ListItem>
                         </asp:DropDownList>
                         </div>
                         <div class="col-12 col-lg-7">
